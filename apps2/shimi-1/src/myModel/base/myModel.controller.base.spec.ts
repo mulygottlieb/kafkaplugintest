@@ -164,7 +164,7 @@ describe("MyModel", () => {
   });
 
   test("POST /myModels existing resource", async () => {
-    let agent = request(app.getHttpServer());
+    const agent = request(app.getHttpServer());
     await agent
       .post("/myModels")
       .send(CREATE_INPUT)
